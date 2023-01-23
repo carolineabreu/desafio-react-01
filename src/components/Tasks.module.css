@@ -1,0 +1,43 @@
+body {
+  background-color: var(--gray-600);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5rem;
+}
+
+.info2 {
+  width: 736px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.createdTasks p {
+  font-weight: 700;
+  color: var(--blue);
+  font-size: 14px;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.createdTasks span,
+.finishedTasks span {
+  color: var(--gray-200);
+  font-weight: 700;
+  background-color: var(--gray-400);
+  border-radius: 1rem;
+  padding: 0.125rem 0.5rem;
+}
+
+.finishedTasks p {
+  font-weight: 700;
+  color: var(--purple);
+  font-size: 14px;
+  display: flex;
+  gap: 0.5rem;
+}
