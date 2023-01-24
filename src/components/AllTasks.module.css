@@ -8,6 +8,7 @@ body {
   justify-content: center;
   align-items: center;
   margin-top: 5rem;
+  margin-bottom: 24px;
 }
 
 .info2 {
@@ -40,4 +41,47 @@ body {
   font-size: 14px;
   display: flex;
   gap: 0.5rem;
+}
+
+.allClipboard {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clipboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 24px;
+  width: 736px;
+  height: 244px;
+  border-top: solid 1px var(--gray-400);
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.clipboard img {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 16px;
+}
+
+.clipboard p {
+  color: var(--gray-300);
+  font-size: 16px;
+  line-height: 22.4px;
+}
+
+.clipboardText {
+  font-weight: 700;
+}
+
+.task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;
 }

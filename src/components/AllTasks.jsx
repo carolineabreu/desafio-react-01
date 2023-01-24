@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
+import clipboard from '../assets/Clipboard.png';
 import styles from './AllTasks.module.css';
 import { Input } from './Input';
 import { Task } from './Task';
@@ -85,17 +86,25 @@ export function AllTasks() {
       {tasks.length > 0 ? (
         tasks.map((currentTask) => {
           return (
-            <Task
-              id={currentTask.id}
-              title={currentTask.title}
-              onChangeIsCheck={isCheck}
-              onDeleteTask={deleteTask}
-              checked={currentTask.check}
-            />
+            <div className={styles.task}>
+              <Task
+                id={currentTask.id}
+                title={currentTask.title}
+                onChangeIsCheck={isCheck}
+                onDeleteTask={deleteTask}
+                checked={currentTask.check}
+              />
+            </div>
           );
         })
       ) : (
-        <p>nada</p>
+        <div className={styles.allClipboard}>
+          <div className={styles.clipboard}>
+            <img src={clipboard} alt='clipboard' />
+            <p className={styles.clipboardText}>Você ainda não tem tarefas cadastradas</p>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </div>
+        </div>
       )}
 
     </>

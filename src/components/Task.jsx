@@ -12,19 +12,17 @@ export function Task({ id, title, onDeleteTask, onChangeIsCheck, check }) {
 
   return (
     <div className={styles.container}>
-      <div >
-        <input
-          className={styles.checkbox}
-          type='checkbox'
-          onClick={handleChangeIsCheck}
-          checked={check}
-          id={id}
-        />
-        <p className={styles.title}>{title}</p>
-        <button className={styles.delete} onClick={handleDeleteTask}>
-          <img src={trash} alt='trash' />
-        </button>
-      </div>
+      <input
+        className={styles.checkbox}
+        type='checkbox'
+        onClick={handleChangeIsCheck}
+        checked={check}
+        id={id}
+      />
+      <p className={styles.title}>{title}</p>
+      <button className={styles.delete} onClick={handleDeleteTask}>
+        <img src={trash} alt='trash' />
+      </button>
     </div>
   );
 }
