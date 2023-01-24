@@ -1,4 +1,7 @@
-import trash from '../assets/trash.svg';
+//import { Trash } from 'phosphor-react';
+import checks from '../assets/check(1).svg';
+import checked from "../assets/check.svg";
+import trash from "../assets/trash.svg";
 import styles from "./Task.module.css";
 
 export function Task({ id, title, onDeleteTask, onChangeIsCheck, check }) {
@@ -12,16 +15,23 @@ export function Task({ id, title, onDeleteTask, onChangeIsCheck, check }) {
 
   return (
     <div className={styles.container}>
-      <input
+      <button
         className={styles.checkbox}
-        type='checkbox'
+        type='button'
         onClick={handleChangeIsCheck}
-        checked={check}
+        check={check}
         id={id}
-      />
-      <p className={styles.title}>{title}</p>
+      >
+        {check === true ? (
+          <img src={checks} alt='check' />
+        ) : (
+          <img src={checked} alt='checked' />
+        )}
+      </button>
+      <p className={!check ? styles.title : styles.titleDone}>{title}</p>
       <button className={styles.delete} onClick={handleDeleteTask}>
         <img src={trash} alt='trash' />
+        {/* <Trash size={24} /> */}
       </button>
     </div>
   );

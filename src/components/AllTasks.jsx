@@ -92,7 +92,7 @@ export function AllTasks() {
                 title={currentTask.title}
                 onChangeIsCheck={isCheck}
                 onDeleteTask={deleteTask}
-                checked={currentTask.check}
+                check={currentTask.check}
               />
             </div>
           );

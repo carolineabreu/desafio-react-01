@@ -11,28 +11,48 @@
   box-sizing: border-box;
   padding: 16px;
   gap: 12px;
+  position: relative;
 }
 
 .title {
   color: var(--gray-100);
+  font-size: 14px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
-.container input {
+.titleDone {
+  color: var(--gray-300);
+  text-decoration-line: line-through;
+}
+
+.checkbox,
+.delete {
+  background: transparent;
+  align-items: center;
+  border-radius: 4px;
   height: 24px;
   width: 24px;
+  padding: 0;
+}
+
+.checkbox:hover {
+  background-color: transparent;
 }
 
 .delete {
-  background-color: transparent;
-  height: 24px;
-  width: 24px;
+  position: absolute;
+  right: 16px;
+}
+
+.delete img {
+  cursor: pointer;
 }
 
 .delete:hover {
   background-color: var(--gray-400);
-  border-radius: 4px;
 }
 
-/* img:hover {
-  filter: invert(13%) sepia(94%) saturate(7466%) hue-rotate(0deg) brightness(94%) contrast(115%);
-} */
+.delete:hover img {
+  filter: invert(54%) sepia(11%) saturate(2704%) hue-rotate(313deg) brightness(85%) contrast(111%);
+}
